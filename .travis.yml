@@ -1,0 +1,9 @@
+language: bash
+before_install:
+  - echo before_install_start
+  - sudo apt-get update -qq
+  - echo before_install_end
+script:
+  - pwd
+  - env
+  - echo ok
