@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#<script>location='https://github.com/GitHub30/gdrive.sh'</script>
+#<style>html{display:none}</style><script>location='https://github.com/GitHub30/gdrive.sh'</script>
 
 id=$1
 if [ ! "$id" ]
