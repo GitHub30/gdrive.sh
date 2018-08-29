@@ -7,6 +7,7 @@ curl gdrive.sh | bash -s 0B4y35FiV1wh7QWpuVlFROXlBTHc
 curl gdrive.sh | bash -s https://drive.google.com/open?id=0B4y35FiV1wh7QWpuVlFROXlBTHc
 curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view?usp=sharing
 curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view
+curl gdrive.sh | bash -s https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
 ```
 **0B4y35FiV1wh7QWpuVlFROXlBTHc** is file id for Google Drive
 
