@@ -16,5 +16,7 @@ bash gdrive.sh https://drive.google.com/file/d/0B4y35FiV1wh7SDd1Q1dUQkZQaUU/view
 rm cabocha-0.69.tar.bz2
 bash gdrive.sh https://drive.google.com/file/d/0B4y35FiV1wh7SDd1Q1dUQkZQaUU/view
 rm cabocha-0.69.tar.bz2
+bash gdrive.sh https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
+rm Ubuntu-12.04-LTS_x86_64.iso
 
 set +xe
