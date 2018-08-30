@@ -7,6 +7,7 @@ then
     cat << EOS
 Usage:
   curl gdrive.sh | bash -s 0B4y35FiV1wh7QWpuVlFROXlBTHc
+  curl gdrive.sh | sh -s https://drive.google.com/open?id=0B7EVK8r0v71pZjFTYXZWM3FlRnM
   curl gdrive.sh | bash -s https://drive.google.com/open?id=0B4y35FiV1wh7QWpuVlFROXlBTHc
   curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view?usp=sharing
   curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view
@@ -19,7 +20,7 @@ EOS
 fi
 
 case "$id" in
-    'https://drive.google.com/open?id='*) id=${id:33};;
+    'https://drive.google.com/open?id='*) id=$(echo "$id" | awk -F'=|&' '{printf"%s",$2}');;
     'https://drive.google.com/file/d/'*|'https://docs.google.com/file/d/'*) id=$(echo "$id" | awk -F'/' '{printf"%s",$6}');;
 esac
 
