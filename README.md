@@ -11,8 +11,8 @@ curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROX
 curl gdrive.sh | bash -s https://drive.google.com/file/d/0B65DIm6DrZJceGltX2VOczNkcEE/edit
 curl gdrive.sh | bash -s https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
 # Folder support
-curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8
-curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8?usp=sharing
+curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28
+curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28?usp=sharing
 ```
 **0B4y35FiV1wh7QWpuVlFROXlBTHc** is file id for Google Drive
 

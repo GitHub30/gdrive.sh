@@ -12,8 +12,8 @@ Usage:
   curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view?usp=sharing
   curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view
   curl gdrive.sh | bash -s https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
-  curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8
-  curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8?usp=sharing
+  curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28
+  curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28?usp=sharing
 
   alias gdrive.sh='curl gdrive.sh | bash -s'
   gdrive.sh 0B4y35FiV1wh7QWpuVlFROXlBTHc
@@ -43,6 +43,12 @@ if echo "$1" | grep '^https://drive.google.com/drive/folders/' || [ ${#id} = 33 
     for storage_path in ${storage_paths}; do
         curl -OJ "$storage_path"
     done
+
+    filenames=$(echo "$json" | grep -A100000 exportJob | awk -F'"' '$0~/^        "fileName"/{print$4}')
+    for filename in ${filenames}; do
+        unzip -o "$filename"
+    done
+    rm ${filenames}
     exit
 fi
 
