@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -xe
 
 bash gdrive.sh 0B4y35FiV1wh7QVR6VXJ5dWExSTQ
@@ -20,6 +21,8 @@ bash gdrive.sh https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
 rm Ubuntu-12.04-LTS_x86_64.iso
 sh gdrive.sh https://drive.google.com/open?id=0B7EVK8r0v71pZjFTYXZWM3FlRnM
 rm img_align_celeba.zip
+sh gdrive.sh 1TdFtOzKlGQnckOavxlwgJuW4nc9oGU6U
+rm takeout-*-001.zip
 sh gdrive.sh https://drive.google.com/drive/folders/0B7EVK8r0v71pOC0wOVZlQnFfaGs
 rm takeout-*-001.zip
 

@@ -21,9 +21,13 @@ EOS
     exit 1
 fi
 
+case "$id" in
+    'https://drive.google.com/open?id='*) id=$(echo "$id" | awk -F'=|&' '{printf"%s",$2}');;
+    'https://drive.google.com/file/d/'*|'https://docs.google.com/file/d/'*|'https://drive.google.com/drive/folders/'*) id=$(echo "$id" | awk -F'/|\?' '{printf"%s",$6}');;
+esac
+
 # Folder
-if echo "$id" | grep '^https://drive.google.com/drive/folders/'; then
-    id=$(echo "$id" | awk -F'/|\?' '{printf"%s",$6}')
+if echo "$1" | grep '^https://drive.google.com/drive/folders/' || [ ${#id} = 33 ]; then
     json=$(curl -s https://takeout-pa.clients6.google.com/v1/exports?key=AIzaSyC1qbk75NzWBvSaDh6KnsjjA9pIrP4lYIE -H 'origin: https://drive.google.com' -H 'content-type: application/json' -d '{"archiveFormat":null,"archivePrefix":null,"conversions":null,"items":[{"id":"'${id}'"}],"locale":null}')
     echo "$json" | grep -A100000 exportJob | grep -e percentDone -e status
 
@@ -41,11 +45,6 @@ if echo "$id" | grep '^https://drive.google.com/drive/folders/'; then
     done
     exit
 fi
-
-case "$id" in
-    'https://drive.google.com/open?id='*) id=$(echo "$id" | awk -F'=|&' '{printf"%s",$2}');;
-    'https://drive.google.com/file/d/'*|'https://docs.google.com/file/d/'*) id=$(echo "$id" | awk -F'/' '{printf"%s",$6}');;
-esac
 
 
 
