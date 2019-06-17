@@ -27,7 +27,7 @@ case "$id" in
 esac
 
 # Folder
-if echo "$1" | grep '^https://drive.google.com/drive/folders/' || [ ${#id} = 33 ]; then
+if echo "$1" | grep '^https://drive.google.com/drive/folders/'; then
     json=$(curl -s https://takeout-pa.clients6.google.com/v1/exports?key=AIzaSyC1qbk75NzWBvSaDh6KnsjjA9pIrP4lYIE -H 'origin: https://drive.google.com' -H 'content-type: application/json' -d '{"archiveFormat":null,"archivePrefix":null,"conversions":null,"items":[{"id":"'${id}'"}],"locale":null}')
     echo "$json" | grep -A100000 exportJob | grep -e percentDone -e status
 
