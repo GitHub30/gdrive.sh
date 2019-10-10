@@ -1,5 +1,5 @@
 # gdrive.sh
-[![Build Status](https://travis-ci.org/GitHub30/gdrive.sh.svg?branch=master)](https://travis-ci.org/GitHub30/gdrive.sh)
+![](https://github.com/GitHub30/gdrive.sh/workflows/build/badge.svg)
 
 # Usage
 ```bash
