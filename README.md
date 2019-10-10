@@ -1,33 +1,50 @@
 # gdrive.sh
 [![Build Status](https://travis-ci.org/GitHub30/gdrive.sh.svg?branch=master)](https://travis-ci.org/GitHub30/gdrive.sh)
 
-# Usage
+## Usage
 ```bash
-curl gdrive.sh | bash -s 0B4y35FiV1wh7QWpuVlFROXlBTHc
-curl gdrive.sh | sh -s https://drive.google.com/open?id=0B7EVK8r0v71pZjFTYXZWM3FlRnM
-curl gdrive.sh | bash -s https://drive.google.com/open?id=0B4y35FiV1wh7QWpuVlFROXlBTHc
-curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view?usp=sharing
-curl gdrive.sh | bash -s https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view
-curl gdrive.sh | bash -s https://drive.google.com/file/d/0B65DIm6DrZJceGltX2VOczNkcEE/edit
-curl gdrive.sh | bash -s https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
-# Folder support
-curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28
-curl gdrive.sh | bash -s https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28?usp=sharing
+curl gdrive.sh | bash -s string
 ```
-**0B4y35FiV1wh7QWpuVlFROXlBTHc** is file id for Google Drive
+### Where "string" can be file/folder url or file/folder id.
 
-# Install
+## Supported url type:
+### Files:
+```bash
+https://drive.google.com/open?id=0B7EVK8r0v71pZjFTYXZWM3FlRnM
+https://drive.google.com/open?id=0B4y35FiV1wh7QWpuVlFROXlBTHc
+https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view?usp=sharing
+https://drive.google.com/file/d/0B4y35FiV1wh7QWpuVlFROXlBTHc/view
+https://docs.google.com/file/d/0BwmPMFurnk9Pak5zWEVyOUZESms/edit
+https://drive.google.com/uc?id=0B7EVK8r0v71pZjFTYXZWM3FlRnM&export=download
+```
+### Folders:
+```bash
+https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28
+https://drive.google.com/drive/folders/0B7EVK8r0v71peklHb0pGdDl6R28?usp=sharing
+https://drive.google.com/folderview?id=0B7EVK8r0v71peklHb0pGdDl6R28&usp=sharing
+https://drive.google.com/folderview?id=0B7EVK8r0v71peklHb0pGdDl6R28
+```
+### Note: Use single or double qoutes on urls having characters like `&` or `-`.
+```
+curl gdrive.sh | bash -s 'https://drive.google.com/folderview?id=0B7EVK8r0v71peklHb0pGdDl6R28--b&usp=sharing'
+```
+or
+```
+curl gdrive.sh | bash -s "https://drive.google.com/folderview?id=0B7EVK8r0v71peklHb0pGdDl6R28--b&usp=sharing"
+```
+## Install
 ```bash
 alias gdrive.sh='curl gdrive.sh | bash -s'
-gdrive.sh 0B4y35FiV1wh7QWpuVlFROXlBTHc
+gdrive.sh
 ```
-# Uninstall
+### You can also grab the script from repository and place in your executable path.
+
+## Uninstall
 ```bash
 unalias gdrive.sh
 ```
 
-# Get a file id
-## Get shareable link
+## Get a file id or shareable link
 ![エビフライトライアングル](https://image.ibb.co/d1FPSp/aaaa.png "サンプル")
 
 ## Copy one
