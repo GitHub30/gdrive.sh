@@ -2,6 +2,8 @@
 This script is obsolete. **Please use gdown**
 
 ```bash
+pip install gdown
+
 # download a file
 gdown https://drive.google.com/uc?id=1l_5RK28JRL19wpT22B-DY9We3TVXnnQQ
 # for a Folder
