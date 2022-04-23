@@ -1,3 +1,15 @@
+
+This script is obsolete. **Please use gdown**
+
+```bash
+# download a file
+gdown https://drive.google.com/uc?id=1l_5RK28JRL19wpT22B-DY9We3TVXnnQQ
+# for a Folder
+gdown --folder https://drive.google.com/drive/u/0/folders/18EunmjOJsbE5Lh9zA0cZ4wKV6Um46dkg
+```
+
+https://colab.research.google.com/drive/1QXVAkUovvIQva65TuvAcca_jRhR_M6Bc?usp=sharing
+
 # gdrive.sh
 [![Build Status](https://travis-ci.org/GitHub30/gdrive.sh.svg?branch=master)](https://travis-ci.org/GitHub30/gdrive.sh)
 
